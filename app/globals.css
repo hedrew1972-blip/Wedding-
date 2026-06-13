@@ -1,19 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root { color-scheme: dark; }
+:root { color-scheme: light; }
 html { scroll-behavior: smooth; }
 body {
-  @apply bg-bg text-ivory font-[Inter] antialiased;
-  background-image: radial-gradient(circle at 20% 0%, rgba(201,168,106,.10), transparent 35%), radial-gradient(circle at 80% 100%, rgba(73,104,88,.15), transparent 30%);
+  @apply bg-ivory text-charcoal font-[Inter] antialiased;
+  background-image:
+    radial-gradient(circle at 15% 0%, rgba(184,154,88,.18), transparent 30%),
+    radial-gradient(circle at 85% 10%, rgba(73,81,91,.12), transparent 28%),
+    linear-gradient(180deg, #F7F3EC 0%, #F3EEE5 100%);
 }
 
-.section-wrap { @apply max-w-7xl mx-auto px-6 md:px-10; }
+a { @apply transition-colors; }
+a:hover { @apply text-gold; }
+
+.section-wrap { @apply mx-auto max-w-7xl px-6 md:px-10; }
 .serif { font-family: 'Playfair Display', serif; }
-.signature { font-family: 'Parisienne', cursive; }
-.card {
-  @apply rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm;
-}
+.card { @apply rounded-[1.4rem] border border-charcoal/10 bg-white/45 shadow-soft backdrop-blur-sm; }
